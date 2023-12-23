@@ -43,9 +43,9 @@
          transition: all 500ms ease-in-out 0s;
       }
 
-      .display {
+      .display, .result {
          width: 100%;
-         height: 20vh;
+         height: 10vh;
          background: grey;
          text-align: right;
          color: yellow;
@@ -61,6 +61,7 @@
 <body>
    <main id="calculator">
       <div id="display" class="display"></div>
+      <div id="result" class="result"></div>
       <section id="keyPad">
          <button id="nine" class="button digit">9</button>
          <button id="eight" class="button digit">8</button>
@@ -107,9 +108,11 @@
       }
       document.getElementById('equal').addEventListener('click', function () {
          const currentNumber = document.getElementById('display').innerText;
+         const result = document.getElementById('result').innerText;
          const answer = eval(currentNumber);
          if (answer || answer === 0) {
-            document.getElementById('display').innerText = answer;
+            result = answer;
+            currentNumber = "";
          }
       });
       document.getElementById('AC').addEventListener('click', function () {
