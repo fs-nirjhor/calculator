@@ -21,7 +21,7 @@
          width: 24%;
          height: 10vh;
          margin: 20px 0 10px;
-         background: red;
+         background: darkred;
          color: yellow;
          font-size: 250%;
          font-weight: bolder;
@@ -38,7 +38,7 @@
 
       .button:hover {
          background: yellow !important;
-         color: red;
+         color: darkred;
          border-radius: 20px;
          transition: all 500ms ease-in-out 0s;
       }
@@ -54,7 +54,7 @@
          overflow: auto;
          word-wrap: break-word;
          font-family: 'Poppins', sans-serif;
-         border: 1px solid lightgray;
+         border: 1px solid darkslategray;
       }
    </style>
 </head>
@@ -117,6 +117,7 @@
       });
       document.getElementById('AC').addEventListener('click', function () {
          document.getElementById('display').innerText = '';
+         document.getElementById('result').innerText = '';
       });
       document.getElementById('C').addEventListener('click', function () {
          const currentDigits = document.getElementById('display').innerText;
