@@ -123,7 +123,7 @@
          const currentDigits = document.getElementById('display').innerText;
          document.getElementById('display').innerText = currentDigits.slice(0, -1);
       });
-      document.getElementById('display').addEventListener('change', function () {
+      document.getElementById('display').innerText.addEventListener('change', function () {
          let currentNumber = document.getElementById('display').innerText;
          const answer = eval(currentNumber);
          if (answer || answer === 0) {
