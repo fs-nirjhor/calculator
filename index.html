@@ -107,7 +107,7 @@
          });
       }
       document.getElementById('equal').addEventListener('click', function () {
-         const currentNumber = document.getElementById('display').innerText;
+         let currentNumber = document.getElementById('display').innerText;
          const answer = eval(currentNumber);
          if (answer || answer === 0) {
             document.getElementById('result').innerText = answer;
