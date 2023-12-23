@@ -108,11 +108,10 @@
       }
       document.getElementById('equal').addEventListener('click', function () {
          const currentNumber = document.getElementById('display').innerText;
-         const result = document.getElementById('result').innerText;
          const answer = eval(currentNumber);
          if (answer || answer === 0) {
-            result = answer;
-            currentNumber = "";
+            document.getElementById('result').innerText = answer;
+            document.getElementById('display').innerText = "";
          }
       });
       document.getElementById('AC').addEventListener('click', function () {
